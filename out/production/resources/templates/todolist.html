@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo Page</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+</head>
+<body>
+<h1>ToDos for today!</h1>
+
+    <table class="table table-striped">
+        <tr>
+            <th>Nr</th>
+            <th>ToDo</th>
+            <th>Urgent?</th>
+            <th>Done?</th>
+
+        </tr>
+        <tr th:each="todo : ${todos}">
+            <td th:text="${todo.getId()}"></td>
+            <td th:text="${todo.getTitle()}"></td>
+            <td th:text="${todo.isUrgent()}"></td>
+            <td th:text="${todo.isDone()}"></td>
+
+        </tr>
+
+</body>
+</html>

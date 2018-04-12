@@ -30,8 +30,9 @@ public class ToDoController {
   }
 
   @PostMapping("/add")
-  public String addSubmit(@ModelAttribute ToDo toDo) {
-    return "result";
+  public String addSubmit(@ModelAttribute(name = "todo") String todo) {
+    toDoRepository.save(new ToDo(todo));
+    return  "redirect: /list";
   }
 
 }

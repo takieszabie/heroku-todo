@@ -8,8 +8,8 @@
 <body>
 <h1>Add ToDo!</h1>
 
-<form action="#" th:action="@{/add}" th:object="${toDo}" method="post">
-    <p>Add this ToDo item: <input type="text" th:field="*{title}" /></p>
+<form action="#" th:action="@{/add}" method="post">
+    <p>Add this ToDo item: <input type="text" name="todo"/></p>
     <p><input type="submit" value="Submit" /></p>
 </form>
 

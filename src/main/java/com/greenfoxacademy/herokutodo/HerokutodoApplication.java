@@ -1,5 +1,7 @@
 package com.greenfoxacademy.herokutodo;
 
+import com.greenfoxacademy.herokutodo.Model.ToDo;
+import com.greenfoxacademy.herokutodo.Model.ToDoService;
 import com.greenfoxacademy.herokutodo.Repository.ToDoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -17,6 +19,5 @@ public class HerokutodoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-
 	}
 }

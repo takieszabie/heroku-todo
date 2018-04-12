@@ -18,4 +18,9 @@ public class ToDoController {
     model.addAttribute("todos", toDoRepository.findAll());
     return "todolist";
   }
+  @RequestMapping(value = {"/add"})
+  public String showAddForm(Model model) {
+    return "addform";
+  }
+
 }

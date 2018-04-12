@@ -32,7 +32,7 @@ public class ToDoController {
   @PostMapping("/add")
   public String addSubmit(@ModelAttribute(name = "todo") String todo) {
     toDoRepository.save(new ToDo(todo));
-    return  "redirect: /list";
+    return  "redirect: /todo/list";
   }
 
 }
